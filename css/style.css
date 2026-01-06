@@ -1,0 +1,130 @@
+:root {
+    --primary-color: #f70c47dd;
+    --header-bg: #d7626c;
+    --footer-bg: #d7626c;
+    --text-color: #333333;
+    --light-text: #ecf0f1;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    background-color: var(--header-bg);
+    color: var(--light-text);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .navbar-brand {
+    color: var(--light-text) !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+header .navbar-brand img {
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+/* Navigation Link Styling */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fff;
+    font-weight: 500;
+}
+
+/* Main Content Styling */
+main {
+    flex: 1;
+    padding: 2rem 0;
+}
+
+.page-title {
+    color: var(--header-bg);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--light-text);
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Enhancements */
+.card {
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+    background-color: #880e2c;
+    /* Darker pink for hover */
+    border: none;
+}
+
+/* Table Styling */
+.table thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Responsive adjustments if needed beyond Bootstrap */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+}
+
+/* Bootstrap Overrides to match Theme */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+/* Fix Login Button Hover & Active */
+.navbar-dark .navbar-nav .nav-link.btn-outline-light:hover,
+.navbar-dark .navbar-nav .nav-link.btn-outline-light.active {
+    color: var(--primary-color) !important;
+    background-color: white !important;
+    border-color: white !important;
+}
